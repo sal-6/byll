@@ -30,7 +30,8 @@ Below is a list of outstanding tasks
 
 ### Core
 
-- [ ] Implement basic navigation between pages (home, incoming bills, outgoing invoices, settings)
+- [x] Implement basic navigation between pages (home, incoming bills, outgoing invoices, settings)
+- [ ] Create a Jira board for tasking
 - [ ] implement outgoing invoices navigater
   - [ ] create a billing cycle for a user
   - [ ] create a list of Items for sale
@@ -41,6 +42,8 @@ Below is a list of outstanding tasks
 ### Low Priority
 
 - [ ] Update ./src/infrastructure/theme/\*
+- [ ] Update ./src/components/typography/\*
+- [ ] Update ./src/components/spacer/\*
 
 ### Bugs
 
