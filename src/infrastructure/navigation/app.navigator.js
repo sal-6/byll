@@ -13,7 +13,7 @@ const FullView = styled.View`
     background-color: red;
 `
 
-// TODO: create actual home page
+// TODO: [BYLL-5] create actual home page
 export const Home = () => {
 
     return (
@@ -27,7 +27,7 @@ export const Home = () => {
     )
 }
 
-// TODO: create actual settings page
+// TODO: [BYLL-6] create actual settings page
 export const Settings = () => {
 
     return (
@@ -41,13 +41,13 @@ export const Settings = () => {
     )
 }
 
-// TODO: Select tab icons
+// TODO: [BYLL-3] Select tab icons
 const TAB_ICONS = {
     Home: "md-home",
     Settings: "md-settings"
 }
 
-// TODO: updaate styles for things
+// TODO: [BYLL-4] updaate styles for things
 const tabOptions = ({route}) => ({
     tabBarIcon: ({color, size}) => {
         let iconName;
@@ -62,6 +62,7 @@ const tabOptions = ({route}) => ({
 
 const Tab = createBottomTabNavigator();
 
+// TODO: [BYLL-7] create other tabs
 export const AppNavigator = () => {
 
     return (
