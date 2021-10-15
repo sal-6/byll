@@ -7,22 +7,17 @@ import styled from "styled-components";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Ionicons} from "@expo/vector-icons"
 
-const FullView = styled.View`
-    flex: 1;
-    width: 100%;
-    background-color: red;
-`
+import { ActiveCycles } from "../../features/activeCycles/screens/active-cycles.screen";
+
 
 // TODO: [BYLL-5] create actual home page
 export const Home = () => {
 
     return (
         <SafeArea>
-            <FullView>
-                <Text>
-                    Home
-                </Text>
-            </FullView>
+            <Text>
+                Home
+            </Text>
         </SafeArea>
     )
 }
@@ -32,11 +27,9 @@ export const Settings = () => {
 
     return (
         <SafeArea>
-            <FullView>
-                <Text>
-                    Settings
-                </Text>
-            </FullView>
+            <Text>
+                Settings
+            </Text>
         </SafeArea>
     )
 }
@@ -44,6 +37,7 @@ export const Settings = () => {
 // TODO: [BYLL-3] Select tab icons
 const TAB_ICONS = {
     Home: "md-home",
+    "Active Cycles": "md-cash",
     Settings: "md-settings"
 }
 
@@ -55,7 +49,7 @@ const tabOptions = ({route}) => ({
         
         return <Ionicons name={iconName} size={size} color={color} />;
     },
-    tabBarActiveTintColor: 'tomato',
+    tabBarActiveTintColor: "#138000",
     tabBarInactiveTintColor: 'gray',
     headerShown: false
 })
@@ -70,6 +64,7 @@ export const AppNavigator = () => {
             screenOptions={tabOptions}
         >
             <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Active Cycles" component={ActiveCycles} />
             <Tab.Screen name="Settings" component={Settings} />
         </Tab.Navigator>
     )

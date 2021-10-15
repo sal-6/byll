@@ -1,4 +1,4 @@
-[
+export const billing_data = [
     {
         client: "Walmart Inc.",
         start_date: "09/01/2021",

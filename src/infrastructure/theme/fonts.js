@@ -1,7 +1,8 @@
+// TODO: [BYLL-13] Select fonts
 export const fonts = {
-    body: "Oswald_400Regular",
-    heading: "Lato_400Regular",
-    monospace: "Oswald_400Regular",
+    body: "normal", 
+    heading: "Roboto",
+    monospace: "monospace",
 };
 
 export const fontWeights = {
