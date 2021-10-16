@@ -14,8 +14,30 @@ export const ActiveCycleCard = ({ cycle = {} }) => {
     end_date = "09/31/2021",
     charges = [
       {
-        name: "Some Item",
+        name: "Some Item 1",
         base_price_per_unit: 200.0,
+        discounts: [
+          {
+            name: "Some Discount",
+            amount: 5.07,
+            is_per_unit: true,
+            description: "N/A",
+          },
+        ],
+        extra_charges: [
+          {
+              name: "Expedited Fee",
+              amount: 1.99,
+              is_per_unit: false,
+              description: "N/A"
+          }
+        ],
+        purchase_date: "09/06/2021",
+        quantity: 5 
+      },
+      {
+        name: "Some Item 2",
+        base_price_per_unit: 100.0,
         discounts: [
           {
             name: "Some Discount",
@@ -64,17 +86,16 @@ export const ActiveCycleCard = ({ cycle = {} }) => {
   }
 
   const total = calculateTotal(charges);
-  console.log(total)
 
   return (
     <CycleCard>
       <InfoContainer>
       <LeftInfo>
-        <Text>{start_date + " - " + end_date}</Text>
-        <Text>{client}</Text>
+        <Text variant="dateRange">{start_date + " - " + end_date}</Text>
+        <Text variant="client">{client}</Text>
       </LeftInfo>
       <TotalView>
-        <Text>{"$" + total}</Text>
+        <Text variant="amount">{"$" + total}</Text>
       </TotalView>
       </InfoContainer>
     </CycleCard>

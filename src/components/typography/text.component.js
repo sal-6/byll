@@ -32,6 +32,23 @@ const label = (theme) => `
     font-weight: ${theme.fontWeights.medium};
 `;
 
+// Specific fonts
+
+const client = (theme) => `
+    font-size: ${theme.fontSizes.body};
+    font-weight: ${theme.fontWeights.medium};
+`
+
+const dateRange = (theme) => `
+    font-family: ${theme.fonts.heading};
+    font-size: ${theme.fontSizes.title}
+`
+
+const amount = (theme) => `
+    font-family: ${theme.fonts.number};
+    font-size: ${theme.fontSizes.h4};
+    color: ${theme.colors.ui.success}
+`
 
 const variants = {
     body,
@@ -39,6 +56,9 @@ const variants = {
     caption,
     error,
     hint,
+    dateRange,
+    client,
+    amount
 };
 
 

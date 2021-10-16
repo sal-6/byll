@@ -9,7 +9,7 @@ export const CycleCard = styled(Card)`
   align-self: center;
   margin: 10px;
   padding: 10px;
-  backgroundColor: ${(props) => props.theme.colors.ui.success};
+  backgroundColor: ${(props) => props.theme.colors.brand.primary};
 `
 
 export const InfoContainer = styled.View`
@@ -17,11 +17,11 @@ export const InfoContainer = styled.View`
 `
 
 export const LeftInfo = styled.View`
-  width: 65%;
+  width: 50%;
 `;
 
 export const TotalView = styled.View`
-  width: 35%;
+  width: 50%;
   align-items: center;
   justify-content:center;
 `;

@@ -1,7 +1,9 @@
 // TODO: [BYLL-13] Select fonts
 export const fonts = {
     body: "normal", 
-    heading: "Roboto",
+    heading: "Montserrat_700Bold_Italic",
+    number: "Rubik_500Medium_Italic",
+    caption: "Roboto",
     monospace: "monospace",
 };
 

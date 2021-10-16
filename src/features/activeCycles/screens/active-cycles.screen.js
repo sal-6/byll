@@ -9,6 +9,7 @@ export const ActiveCycles = () => {
     <SafeArea>
       <ActiveCycleCard />
       <ActiveCycleCard />
+      <ActiveCycleCard />
     </SafeArea>
   );
 };
