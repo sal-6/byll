@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Card } from "react-native-elements";
+import { Card} from "react-native-paper";
+
 
 export const CycleCard = styled(Card)`
-  backgorund-color: blue;
-`.attr({});
+  width: 95%;
+  align-self: center;
+  margin: 10px;
+  padding: 10px;
+  backgroundColor: ${(props) => props.theme.colors.ui.success};
+`
 
 export const InfoContainer = styled.View`
   flex-direction: row;
