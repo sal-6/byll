@@ -3,7 +3,6 @@ export const billing_data = [
         client: "Walmart Inc.",
         start_date: "09/01/2021",
         end_date: "09/31/2021",
-        tax_rate: 0.06,
         charges: [
             {
                 name: "Lego Porsche 911 GT3RS",
@@ -63,7 +62,6 @@ export const billing_data = [
         client: "Target Inc.",
         start_date: "09/10/2021",
         end_date: "10/10/2021",
-        tax_rate: 0.06,
         charges: [
             {
                 name: "Nintendo Switch OLED",
