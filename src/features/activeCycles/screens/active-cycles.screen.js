@@ -7,6 +7,7 @@ import { ActiveCycleCard } from "../components/active-cycle-card.component";
 import { AddCycleButton } from "../../../components/addCycleButton/add-cycle-button.component";
 
 import { billing_data } from "../../../../testing/proxy_data/billing-data.proxy.js";
+import { TouchableOpacity } from "react-native";
 
 
 const AddCycleContainer = styled.View`
@@ -25,7 +26,11 @@ export const ActiveCycles = () => {
 
   return (
     <SafeArea>
-      {billing_data.map((item, i) => {return <ActiveCycleCard key={i} cycle={item}/>})}
+      {billing_data.map((item, i) => {return (
+        <TouchableOpacity onPress={() => {console.log("Hi")}}>
+        <ActiveCycleCard key={i} cycle={item}/>
+        </TouchableOpacity>
+      )})}
       <AddCycleContainer>
         <AddCycleButton onPress={onAddStyle}/>
       </AddCycleContainer>

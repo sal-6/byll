@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Ionicons} from "@expo/vector-icons"
 
-import { ActiveCycles } from "../../features/activeCycles/screens/active-cycles.screen";
+import { ActiveCyclesNavigator } from "./active-cycles.navigator";
 
 
 // TODO: [BYLL-5] create actual home page
@@ -64,7 +64,7 @@ export const AppNavigator = () => {
             screenOptions={tabOptions}
         >
             <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Active Cycles" component={ActiveCycles} />
+            <Tab.Screen name="Active Cycles" component={ActiveCyclesNavigator} />
             <Tab.Screen name="Settings" component={Settings} />
         </Tab.Navigator>
     )
