@@ -9,32 +9,35 @@ import { AddCycleButton } from "../../../components/addCycleButton/add-cycle-but
 import { billing_data } from "../../../../testing/proxy_data/billing-data.proxy.js";
 import { TouchableOpacity } from "react-native";
 
-
 const AddCycleContainer = styled.View`
   position: absolute;
   bottom: 4%;
   right: 8%;
-`
+`;
 
-
-
-export const ActiveCycles = () => {
-
+export const ActiveCycles = ({ navigation }) => {
   const onAddStyle = () => {
     console.log("Add Cycle");
-  }
+  };
 
   return (
     <SafeArea>
-      {billing_data.map((item, i) => {return (
-        <TouchableOpacity onPress={() => {console.log("Hi")}}>
-        <ActiveCycleCard key={i} cycle={item}/>
-        </TouchableOpacity>
-      )})}
+      {billing_data.map((item, i) => {
+        return (
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("Active Cycle Detail", {
+                cycle: item,
+              });
+            }}
+          >
+            <ActiveCycleCard key={i} cycle={item} />
+          </TouchableOpacity>
+        );
+      })}
       <AddCycleContainer>
-        <AddCycleButton onPress={onAddStyle}/>
+        <AddCycleButton onPress={onAddStyle} />
       </AddCycleContainer>
-      
     </SafeArea>
   );
 };
